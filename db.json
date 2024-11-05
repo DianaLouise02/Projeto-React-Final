@@ -1,0 +1,72 @@
+{
+    "temporadas": [
+        {
+           "id": "1",
+           "titulo": "Temporada 1",
+           "imageUrl": "https://i.pinimg.com/736x/97/24/ea/9724ea11ecce2bd788efebc19667bfb4.jpg",
+           "ano": "2011"
+        },
+        {
+            "id": "2",
+            "titulo": "Temporada 2",
+            "imageUrl": "https://m.media-amazon.com/images/I/718ya2NxPcL._AC_UF894,1000_QL80_.jpg",
+            "ano":"2012-13"
+        },
+        {
+            "id": "3",
+            "titulo": "Temporada 3",
+            "imageUrl":"https://media.fstatic.com/wSgDTdL63fx60tlaV__P8KX8D4c=/322x478/smart/filters:format(webp)/media/movies/covers/2013/07/suits-3a-temporada_t67099.jpg",
+            "ano":"2013-14"
+        },
+        {
+            "id": "4",
+            "titulo": "Temporada 4",
+            "imageUrl":"https://image.tmdb.org/t/p/original/7RSiqRgX2TGFdCXMzkNUxWmpirS.jpg",
+            "ano":"2014-15"
+        },
+        {
+            "id": "5",
+            "titulo": "Temporada 5",
+            "imageUrl":"https://m.media-amazon.com/images/I/616POZCJSYL._AC_UF894,1000_QL80_.jpg",
+            "ano":"2015-16"
+        },
+        {
+            "id": "6",
+            "titulo": "Temporada 6",
+            "imageUrl":"https://image.tmdb.org/t/p/original/pWJUnNpZNeJo66FZ8ULj471RM7P.jpg",
+            "ano":"2016-17"
+        },
+        {
+            "id": "7",
+            "titulo": "Temporada 7",
+            "imageUrl":"https://m.media-amazon.com/images/I/61e5LFtuKLL._AC_UF894,1000_QL80_.jpg",
+            "ano":"2017-18"
+        },
+        {
+            "id": "8",
+            "titulo": "Temporada 8",
+            "imageUrl":"https://resizing.flixster.com/-XZAfHZM39UwaGJIFWKAE8fS0ak=/v3/t/assets/p15596973_b_v8_aa.jpg",
+            "ano":"2018-19"
+        },
+        {
+            "id": "9",
+            "titulo": "Temporada 9",
+            "imageUrl":"https://http2.mlstatic.com/D_NQ_NP_740131-MLM41099965347_032020-O.jpg",
+            "ano":"2019"
+        }
+        
+    ]
+
+
+
+
+
+
+
+
+
+
+
+
+
+}
