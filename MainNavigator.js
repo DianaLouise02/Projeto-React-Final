@@ -7,7 +7,7 @@ import Personagens from './src/Pages/Personagens';
 import Curiosidades from './src/Pages/Curiosidades';
 import RedesSociais from './src/Pages/RedesSociais';
 import Forum from './src/Pages/Forum';
-import Cadastro from './src/Pages/Cadastro';
+import Login from './src/Pages/Login';
 
 const Stack = createNativeStackNavigator();
 
@@ -22,7 +22,7 @@ export default function MainNavigator() {
         <Stack.Screen name = "Curiosidades" component = {Curiosidades} />        
         <Stack.Screen name = "RedesSociais" component = {RedesSociais} />        
         <Stack.Screen name = "Forum" component = {Forum} />
-        <Stack.Screen name = "Cadastro" component = {Cadastro} />
+        <Stack.Screen name = "Login" component = {Login} />
     </Stack.Navigator>
 </NavigationContainer>
   )
