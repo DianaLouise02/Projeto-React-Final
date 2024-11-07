@@ -12,7 +12,7 @@ export default function Home() {
                 <Card
                     title="Temporadas"
                     imageSource={require('../Images/SuitsSeason1.png')}
-                    content="141 episódios totais, 9 temporadas"
+                    content="134 episódios totais, 9 temporadas"
                     buttonText="Ver todas as Temporadas"
                     onPress={() => navigation.navigate('Temporadas')}
                 />

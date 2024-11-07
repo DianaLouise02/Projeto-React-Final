@@ -55,6 +55,88 @@
             "ano":"2019"
         }
         
+    ],
+
+    "personagens": [
+        {
+            "id": "1",
+            "nome": "Harvey Specter",
+            "imageCharacter": "https://static.wikia.nocookie.net/suits/images/d/da/S8_Harvey_Specter.jpg/revision/latest?cb=20180731195449",
+            "descricao": " Um dos protagonistas de Suits e responsável por contratar Mike Ross como associado, mesmo sem ele ter um diploma ou permissão para advogar. Harvey é referido como um dos melhores negociadores da cidade e se formou em Direito na Universidade de Harvard.",
+            "aparicao": "2011-2019"
+        },
+        {
+
+            "id": "2",
+            "nome": "Michael Ross",
+            "imageCharacter": "https://static.wikia.nocookie.net/suits/images/c/c2/Mike_Ross_%285x7%29.png/revision/latest?cb=20190903001426",
+            "descricao": " Chamado apenas de Mike Ross, é um dos protagonistas de Suits. Foi contratado por Harvey Specter, um sócio sênior da Pearson Hardman, como advogado associado, apesar de não ter se formado ou ter diploma de direito.",
+            "aparicao": "2011-2018"
+        },
+        {
+            "id": "3",
+            "nome": "Jessica Pearson",
+            "imageCharacter": "https://preview.redd.it/jessica-pearsons-character-v0-kzvn4jwqum8c1.png?width=700&format=png&auto=webp&s=20174048fa6c2c0c447258b92a52c07c73a79e09",
+            "descricao": " Protagonista mulher de Suits. Sócia gerente da firma Pearson Specter Litt, respeitada no ramo da advocacia e mentora de Harvey Specter.", 
+            "aparicao": "2011-2016"
+        },
+        {
+            "id": "4",
+            "nome": "Rachel Zane",
+            "imageCharacter": "https://hips.hearstapps.com/hmg-prod/images/meghan-markle-suits-rachel-zane-1547389960.jpg?crop=0.566xw:0.849xh;0.211xw,0.151xh&resize=640:*",
+            "descricao": " É advogada, ex-associada e paralegal da Specter Litt, filha de Robert Zane, um renomado advogado, e esposa de Mike Ross.", 
+            "aparicao": "2011-2018"
+        },
+        {
+            "id": "5",
+            "nome": "Louis Litt",
+            "imageCharacter": "https://static.wikia.nocookie.net/suits/images/f/f1/S8_Louis_Litt.jpg/revision/latest?cb=20180731195639",
+            "descricao": " Sócio nominal da firma Pearson Specter Litt. Seu objetivo é superar a performance do Harvey e obter a admiração do próprio, a quem ele considera seu rival e melhor amigo ao mesmo tempo.", 
+            "aparicao": "2011-2019"
+        },
+        {
+            "id": "6",
+            "nome": "Katrina Bennett",
+            "imageCharacter": "https://tvline.com/wp-content/uploads/2018/03/suits-amanda-schull.jpg?w=600&h=400&crop=1",
+            "descricao": "Inicialmente uma promotora distrital assistente, que almejava entrar para o direito corporativo como Harvey Specter e concordou em ajudá-lo em um caso, desde que ele a contratasse como associada sênior na Pearson Hardman, onde ela se tornou a associada preferida de Louis Litt.", 
+            "aparicao": "2014, 2015, 2018-2019"
+        },
+        {
+            "id": "7",
+            "nome": "Donna Paulsen",
+            "imageCharacter": "https://www.nydailynews.com/wp-content/uploads/migration/2017/08/24/GJAWKPABQCOPFCAF5ZJBJ2PF4Q.jpg",
+            "descricao": "Secretária Jurídica que trabalhou com Harvey Specter por 13 anos. Uma profissional competente, inteligente e que tem amplo conhecimento das relações humanas.", 
+            "aparicao": "2011-2019"
+        },
+        {
+            "id": "8",
+            "nome": "Samantha Wheeler",
+            "imageCharacter": "https://i.pinimg.com/736x/19/df/05/19df053d7ce1fce84030521f479ee95a.jpg",
+            "descricao": " Inicialmente uma sócia sênior na Rand, Kaldor & Zane, saiu para seguir Robert Zane na Zane Specter Litt. É conhecida por ser extremamente implacável e trabalhadora, e o braço direito de Robert Zane.", 
+            "aparicao": "2018-2019"
+        },
+        {
+            "id": "9",
+            "nome": "Alex Williams",
+            "imageCharacter": "https://static.wikia.nocookie.net/suits/images/f/f6/S8_Alex_Williams.jpg/revision/latest?cb=20180731195211",
+            "descricao": "Amigo de muitos anos do Harvey, que vai trabalhar na Specter Litt como sócio sênior, tornando-se sócio nominal na oitava temporada.", 
+            "aparicao": "2017-2019"
+        },
+        {
+            "id": "10",
+            "nome":"Dana Scott",
+            "imageCharacter": "https://i.pinimg.com/736x/18/a5/28/18a5283042ff61523bc5066fd42ae835.jpg",
+            "descricao": "Dana Scott é uma advogada ambiciosa e competitiva que trabalha em um escritório rival ao de Harvey Specter.", 
+            "aparicao": "2013"
+        },
+        {
+            "id": "11",
+            "nome":"Robert Zane",
+            "imageCharacter": "https://static.wikia.nocookie.net/suits/images/4/43/Robert_Zane_-_Profil.png/revision/latest?cb=20180120180026&path-prefix=de",
+            "descricao": "Advogado de sucesso, pai de Rachel Zane. Conhecido por sua inteligência e habilidade jurídica, ele é uma figura respeitada no mundo corporativo, muitas vezes atuando como mentor e conselheiro, mas também lidando com desafios éticos e familiares.", 
+            "aparicao": "2012-2019"
+        }
+        
     ]
 
 }
