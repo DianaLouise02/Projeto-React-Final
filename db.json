@@ -135,8 +135,80 @@
             "imageCharacter": "https://static.wikia.nocookie.net/suits/images/4/43/Robert_Zane_-_Profil.png/revision/latest?cb=20180120180026&path-prefix=de",
             "descricao": "Advogado de sucesso, pai de Rachel Zane. Conhecido por sua inteligência e habilidade jurídica, ele é uma figura respeitada no mundo corporativo, muitas vezes atuando como mentor e conselheiro, mas também lidando com desafios éticos e familiares.", 
             "aparicao": "2012-2019"
+        },
+        {
+            "id": "12",
+            "nome":"Trevor Evans",
+            "imageCharacter": "https://static.wikia.nocookie.net/suits/images/5/56/Trevor_%285x9%29.png/revision/latest?cb=20190904213305",
+            "descricao": "Amigo de infância de Mike Ross e também foi namorado de Jenny Griffith. O relacionamento deles terminou, no entanto, depois que informou Jessica Pearson que Mike não havia cursado Direito.", 
+            "aparicao": "2011-2012"
+        },
+        {
+            "id": "13",
+            "nome":"Jenny Griffith",
+            "imageCharacter": "https://static.wikia.nocookie.net/suits/images/a/a0/S01E10Promo08_-_Jenny.jpg/revision/latest?cb=20170218090732",
+            "descricao": " Ex-namorada de Trevor Evans e Mike Ross. Seu relacionamento com Mike era complicado, pois, além do fato de que ele era o melhor amigo de seu ex-namorado, Mike estava lutando para escolher entre ela e Rachel Zane ", 
+            "aparicao": "2011-2012"
+        },
+        {
+            "id": "14",
+            "nome":"Charles Forstman",
+            "imageCharacter": "https://static.wikia.nocookie.net/suits/images/8/8a/Charles_Forstman_%284x16%29.png/revision/latest?cb=20190829173206",
+            "descricao": " Bilionário com a reputação de banqueiro duvidoso e manipulador. Foi cliente do Harvey Specter, e ofereceu acordo financeiro para o irmão mais novo de Harvey, Marcus Specter.", 
+            "aparicao": "2014, 2015 e 2019"
+        },
+        {
+            "id": "15",
+            "nome":"Cameron Dennis",
+            "imageCharacter": "https://static.wikia.nocookie.net/suits/images/6/66/Cameron_Dennis_%283x08%29.png/revision/latest?cb=20170820120222",
+            "descricao": " Promotor público de Manhattan para quem Harvey trabalhou como promotor público assistente antes de trabalhar na Pearson Hardman. Ele tem ética questionável e se envolve em atos ilegais para garantir que aqueles que ele pessoalmente considera culpados, independentemente de evidências, sejam encarcerados. ", 
+            "aparicao": "2011, 2013, 2016 e 2018"
+        },
+        {
+            "id": "16",
+            "nome":"Edward Darby",
+            "imageCharacter": "https://static.wikia.nocookie.net/suits/images/4/4a/Edward_Darby_%283x08%29.png/revision/latest?cb=20170820120024",
+            "descricao": "Advogado corporativo de renome internacional. Sócio-gerente da Darby International , ele também foi ex-sócio-gerente da Pearson Darby e Pearson Darby Specter. ", 
+            "aparicao": "2012"
+        },
+        {
+            "id": "17",
+            "nome":"Sean Cahill",
+            "imageCharacter": "https://static.wikia.nocookie.net/suits/images/4/4c/Sean_Cahill_%284x04%29.png/revision/latest?cb=20170829070840",
+            "descricao": "Promotor que estava investigando a Pearson Specter por sugestão de seu amigo e superior Eric Woodall. Foi notificado por Harvey Specter e Mike Ross de que Woodall era corrupto e parou de processá-los. Tempos depois, se tornou um aliado de confiança de Harvey e Mike, trabalhando com eles para prender Charles Forstman. Foi responsável por libertar Mike da prisão, logo após ele ter sido condenado por fraude.", 
+            "aparicao": "2014, 2016, 2018-2019"
+        },
+        {
+            "id": "18",
+            "nome":"Eric Woodall",
+            "imageCharacter": "https://static.wikia.nocookie.net/suits/images/b/b8/Eric_Woodall_%284x9%29.png/revision/latest?cb=20190827031201",
+            "descricao": " Ex-chefe da Comissão de Valores Mobiliários dos EUA , bem como o ex-procurador dos EUA para o Distrito Sul de Nova York. Foi demitido de seu cargo por processar maliciosamente  a Pearson Specter.", 
+            "aparicao": "2013-2015"
+        },
+        {
+            "id": "19",
+            "nome":"Marcus Specter",
+            "imageCharacter": "https://static.wikia.nocookie.net/suits/images/6/68/Marcus_%286x12%29.png/revision/latest?cb=20190913234418",
+            "descricao": " Irmão mais novo de Harvey que sofre de vício em jogos de azar.", 
+            "aparicao": "2015-2019"
+        },
+        {
+            "id": "20",
+            "nome":"Lily Specter",
+            "imageCharacter": "https://static.wikia.nocookie.net/suits/images/d/da/Lily_%286x12%29.png/revision/latest?cb=20190913234322",
+            "descricao": " Mãe de Harvey e Marcus Specter. Traiu o pai de Harvey por muitos anos, o que levou a um afastamento entre ela e Harvey. ", 
+            "aparicao": "2015-2019"
+        },
+        {
+            "id": "21",
+            "nome":"Gordon Specter",
+            "imageCharacter": "https://pbs.twimg.com/media/GBqsllgXEAAkyGH.jpg",
+            "descricao": "Ex-saxofonista, amante da música e pai de Harvey e Marcus Specter. Faleceu antes dos eventos de Suits, aparecendo apenas nas recordações do Harvey.", 
+            "aparicao": "2013"
         }
+
         
     ]
 
+    
 }

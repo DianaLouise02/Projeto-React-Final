@@ -47,7 +47,7 @@ export default function Personagens() {
       data={personagens} // Dados a serem exibidos
       renderItem={renderPersonagem} // Como renderizar cada item
       keyExtractor={(item) => item.id.toString()} // Chave única para cada item
-      scrollEventThrottle={16} // Desempenho de rolagem otimizado
+     
     />
   );
 }
