@@ -55,11 +55,12 @@ export default function Personagens() {
 const stylesCharacter = StyleSheet.create({
   container: {
     backgroundColor: "lightgray",
+  
     borderRadius: 10,
     padding: 25,
     margin: 10,
     marginTop: 12,
-    elevation: 3, // Sombra para Android
+    elevation: 4, // Sombra para Android
     shadowColor: "#000", // Sombra para IOS
     shadowOpacity: 0.2,
     shadowRadius: 1.4,
@@ -86,7 +87,7 @@ const stylesCharacter = StyleSheet.create({
   },
 
   description: {
-    fontSize: 14,
+    fontSize: 15,
     color: "#555",
     textAlign: "center",
     
@@ -96,5 +97,5 @@ const stylesCharacter = StyleSheet.create({
     fontSize: 14,
     color: "#777",
     textAlign: "center",
-  },
+  }
 });
