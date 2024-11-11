@@ -65,7 +65,7 @@ const styleCuriosity = StyleSheet.create({
 
   imageCuriosity: {
     width: 340,
-    height: 250,
+    height: 300,
     marginVertical: 10,
     alignSelf: "center",
 

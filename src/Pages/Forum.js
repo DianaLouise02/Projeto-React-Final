@@ -1,7 +1,8 @@
 import React from 'react'
+import { Text } from 'react-native'
 
 export default function Forum() {
   return (
-    <div>Forum</div>
+ <Text>Ir para forum</Text>
   )
 }
