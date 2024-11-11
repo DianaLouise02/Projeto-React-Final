@@ -55,7 +55,6 @@ export default function Personagens() {
 const stylesCharacter = StyleSheet.create({
   container: {
     backgroundColor: "lightgray",
-  
     borderRadius: 10,
     padding: 25,
     margin: 10,
