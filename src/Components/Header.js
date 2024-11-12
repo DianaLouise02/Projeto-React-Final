@@ -35,7 +35,7 @@ const estilos = StyleSheet.create({
     width: "30%",
     height: 75,
     marginTop: 25,
-    marginLeft: 139,
+    marginLeft: 131,
   },
  
 

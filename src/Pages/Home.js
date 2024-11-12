@@ -40,6 +40,14 @@ export default function Home() {
                     buttonText="Ver"
                     onPress={() => navigation.navigate('RedesSociais')}
                 />
+                
+                <Card
+                    title="Fórum"
+                    imageSource={require('../Images/Forum.jpg')}
+                    content="Ambiente para interação"
+                    buttonText="Ver"
+                    onPress={() => navigation.navigate('Forum')}
+                />
             </View>
         </ScrollView>
     );

@@ -221,42 +221,49 @@
             "id": "24",
             "nome": "Dana Scott",
             "imageCharacter": "https://i.pinimg.com/736x/18/a5/28/18a5283042ff61523bc5066fd42ae835.jpg",
-            "descricao": "Dana Scott é uma advogada ambiciosa e competitiva que trabalha em um escritório rival ao de Harvey Specter.",
+            "descricao": "É uma advogada ambiciosa e competitiva que trabalha em um escritório rival ao de Harvey Specter.",
             "aparicao": "2013"
         },
         {
             "id": "25",
             "nome": "Robert Zane",
             "imageCharacter": "https://static.wikia.nocookie.net/suits/images/4/43/Robert_Zane_-_Profil.png/revision/latest?cb=20180120180026&path-prefix=de",
-            "descricao": "Advogado de sucesso, pai de Rachel Zane. Conhecido por sua inteligência e habilidade jurídica, ele é uma figura respeitada no mundo corporativo, muitas vezes atuando como mentor e conselheiro, mas também lidando com desafios éticos e familiares.",
+            "descricao": "Advogado de sucesso, pai de Rachel Zane. Conhecido por sua inteligência e habilidade jurídica, é uma figura respeitada no mundo corporativo, muitas vezes atuando como mentor e conselheiro, mas também lidando com desafios éticos e familiares.",
             "aparicao": "2012-2019"
         },
         {
             "id": "26",
+            "nome": "Sheila Sazs",
+            "imageCharacter": "https://static.wikia.nocookie.net/suits/images/e/e5/Sheila_Sazs_%288x5%29.png/revision/latest?cb=20190929081429",
+            "descricao": "Uma funcionária da Universidade de Harvard que Louis Litt convidou para avaliar a Pearson Hardman quando a universidade quis rescindir os privilégios de recrutamento da empresa, depois que uma pesquisa mostrou que os associados da empresa estavam descontentes. Logo depois disso, ela começou um relacionamento com Louis Litt.",
+            "aparicao": "2012-2019"
+        },
+        {
+            "id": "27",
             "nome": "Anita Gibbs",
             "imageCharacter": "https://static.wikia.nocookie.net/suits/images/d/d6/Anita_Gibbs_%287x07%29.png/revision/latest?cb=20170825013628",
             "descricao": " Procuradora-assistente dos EUA para o Distrito Sul de Nova York e a promotora principal no caso Mike Ross, quando Mike é acusado de exercer a advocacia sem licença. ",
             "aparicao": "2015-2017 "
         },
         {
-            "id": "27",
+            "id": "28",
             "nome": "Jack Soloff",
             "imageCharacter": "https://static.wikia.nocookie.net/suits/images/f/fb/Jack_Soloff_%285x10%29.png/revision/latest?cb=20190905035916",
             "descricao": " Advogado corporativo e sócio sênior. Inicialmente trabalhando para a Pearson Specter Litt, era o chefe do comitê de compensação e também responsável pela promoção de Mike Ross a sócio júnior. No entanto, ele abandonou a empresa junto com os outros sócios após a condenação de Mike, juntando-se à Rand, Kaldor & Zane. ",
             "aparicao": "2015 e 2017 "
         },
         {
-            "id": "28",
+            "id": "29",
             "nome": "Frank Gallo",
             "imageCharacter": "https://static.wikia.nocookie.net/suits/images/7/7f/Frank_Gallo.png/revision/latest?cb=20190911005722",
             "descricao": " Criminoso que supostamente cometeu extorsão, mas, na realidade, foi investigado por conspiração para cometer assassinato. Foi enviado para a prisão por isso e, eventualmente, transferido para Danbury. Foi processado por Harvey Specter e jurou vingança contra este último.",
             "aparicao": "2016-2018 "
         },
         {
-            "id": "29",
+            "id": "30",
             "nome": "Andrew Malik",
             "imageCharacter": "https://static.wikia.nocookie.net/suits/images/5/5b/Andrew_Malik_%287x09%29.png/revision/latest?cb=20170908112440",
-            "descricao": "  Ex-procurador-geral adjunto do estado de Nova York e ex-promotor que trabalhava para Cameron Dennis, este que foi o mentor do Harvey.",
+            "descricao": "  Ex-procurador-geral adjunto do estado de Nova York e ex-promotor que trabalhava para Cameron Dennis, no posto hierárquico abaixo de Harvey.",
             "aparicao": "2017-2019 "
         }
     ],
@@ -334,9 +341,10 @@
             "imagemCuriosidade":"https://static01.nyt.com/images/2011/06/23/arts/SUBSUITS/SUBSUITS-articleLarge.jpg?quality=75&auto=webp&disable=upscale",
             "informacao":" A série é conhecida por suas referências pop e culturais, incluindo citações de filmes e músicas. Isso adicionou um toque divertido e contemporâneo às tramas jurídicas."
         }
-
-
-
-
     ]
+
+   
+
+
+
 }
