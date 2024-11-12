@@ -1,17 +1,25 @@
 import React from 'react'
-import { Button, Image, StyleSheet, Text, View } from 'react-native'
+import { useNavigation } from '@react-navigation/native';
+import { TouchableOpacity } from 'react-native';
+import { Image, StyleSheet, Text, View } from 'react-native'
 
 export default function Card(props) {
+  const navigation = useNavigation();
+
+  const handlePress = () => {
+    if (props.navigationTarget) {
+      navigation.navigate(props.navigationTarget);
+  }
+}
   return (
-    <View style={styles.card}>
-      <Text style={styles.cardTitle}> {props.title}</Text>
-      {props.imageSource && (
-        <Image source={props.imageSource} style={styles.cardImage} />
-      )}
-      <Text style={styles.cardContent}> {props.content}</Text>
-      <Button title={props.buttonText} onPress={props.onPress} />
-    </View>
-  )
+    <TouchableOpacity onPress={handlePress} style={styles.card}>
+    <Text style={styles.cardTitle}>{props.title}</Text>
+    {props.imageSource && (
+      <Image source={props.imageSource} style={styles.cardImage} />
+    )}
+    <Text style={styles.cardContent}>{props.content}</Text>
+  </TouchableOpacity>
+  );
 }
 
 const styles = StyleSheet.create({

@@ -13,40 +13,35 @@ export default function Home() {
                     title="Temporadas"
                     imageSource={require('../Images/SuitsSeason1.png')}
                     content="134 episódios totais, 9 temporadas"
-                    buttonText="Ver todas as Temporadas"
-                    onPress={() => navigation.navigate('Temporadas')}
+                    navigationTarget="Temporadas"
                 />
 
                 <Card
                     title="Personagens"
                     imageSource={require('../Images/SuitsCharacters.jpg')}
                     content="Conheça os personagens da série mais famosa de drama jurídico."
-                    buttonText="Ver os Personagens"
-                    onPress={() => navigation.navigate('Personagens')}
+                    navigationTarget="Personagens"
                 />
 
                 <Card
                     title="Curiosidades"
                     imageSource={require('../Images/Curiosidades.jpg')}
                     content="Fatos interessantes da série"
-                    buttonText="Ver as Curiosidades"
-                    onPress={() => navigation.navigate('Curiosidades')}
+                    navigationTarget="Curiosidades"
                 />
 
                 <Card
                     title="Redes Sociais"
                     imageSource={require('../Images/RedesSociais.jpg')}
                     content="Redes sociais do elenco"
-                    buttonText="Ver"
-                    onPress={() => navigation.navigate('RedesSociais')}
+                    navigationTarget="RedesSociais"
                 />
-                
+
                 <Card
                     title="Fórum"
                     imageSource={require('../Images/Forum.jpg')}
                     content="Ambiente para interação"
-                    buttonText="Ver"
-                    onPress={() => navigation.navigate('Forum')}
+                    navigationTarget="Forum"
                 />
             </View>
         </ScrollView>

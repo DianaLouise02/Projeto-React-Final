@@ -15,16 +15,16 @@ const Stack = createNativeStackNavigator();
 export default function MainNavigator() {
   return (
     <NavigationContainer>
-    <Stack.Navigator initialRouteName = "Home">
-        <Stack.Screen name = "Home" component = {Home}  options={{headerShown: false }} />
-        <Stack.Screen name = "Temporadas" component = {Temporadas} />
-        <Stack.Screen name = "Personagens" component = {Personagens} />
-        <Stack.Screen name = "Curiosidades" component = {Curiosidades} />        
-        <Stack.Screen name = "RedesSociais" component = {RedesSociais} />        
-        <Stack.Screen name = "Forum" component = {Forum} />
-        <Stack.Screen name = "Login" component = {Login} />
-    </Stack.Navigator>
-</NavigationContainer>
+      <Stack.Navigator initialRouteName="Home">
+        <Stack.Screen name="Home" component={Home} options={{ headerShown: false }} />
+        <Stack.Screen name="Temporadas" component={Temporadas} />
+        <Stack.Screen name="Personagens" component={Personagens} />
+        <Stack.Screen name="Curiosidades" component={Curiosidades} />
+        <Stack.Screen name="RedesSociais" component={RedesSociais} />
+        <Stack.Screen name="Forum" component={Forum} />
+        <Stack.Screen name="Login" component={Login} />
+      </Stack.Navigator>
+    </NavigationContainer>
   )
 }
 

@@ -341,9 +341,23 @@
             "imagemCuriosidade":"https://static01.nyt.com/images/2011/06/23/arts/SUBSUITS/SUBSUITS-articleLarge.jpg?quality=75&auto=webp&disable=upscale",
             "informacao":" A série é conhecida por suas referências pop e culturais, incluindo citações de filmes e músicas. Isso adicionou um toque divertido e contemporâneo às tramas jurídicas."
         }
-    ]
+    ],
 
-   
+   "forum": [
+    {
+        "id":"1",
+        "nome":"Ana Leticia",
+        "comentario":""
+    },
+    {
+        "id":"2",
+        "nome":"Ana Leticia",
+        "comentario":""
+    }
+    
+
+
+]
 
 
 
