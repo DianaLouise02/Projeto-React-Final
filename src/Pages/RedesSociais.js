@@ -144,18 +144,6 @@ const redesSociais = [
     instagramUrl: 'https://www.instagram.com/usmanally/',
     imagemUrl: 'https://static.wikia.nocookie.net/suits/images/5/5b/Andrew_Malik_%287x09%29.png/revision/latest/scale-to-width/360?cb=20170908112440',
   },
-  
-
-
-
-  
-
-
-
-
-
-
-
 ]
 
 return (
