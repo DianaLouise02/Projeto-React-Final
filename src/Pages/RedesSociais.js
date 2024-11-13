@@ -132,13 +132,20 @@ const redesSociais = [
   },
   {
     id: '18',
+    interprete: 'David Reale',
+    user: 'therealedavid',
+    instagramUrl: 'https://www.instagram.com/therealedavid/',
+    imagemUrl: 'https://m.media-amazon.com/images/M/MV5BNGU0MzQ2MTQtZTUyOC00MTk0LWEwMWItNWRhMTgwZDkzMmJkXkEyXkFqcGc@._V1_.jpg',
+  },
+  {
+    id: '19',
     interprete: 'John Pyper-Ferguson',
     user: 'johnpyperferguson_',
     instagramUrl: 'https://www.instagram.com/johnpyperferguson_/',
     imagemUrl: 'https://static.wikia.nocookie.net/suits/images/f/fb/Jack_Soloff_%285x10%29.png/revision/latest?cb=20190905035916',
   },
   {
-    id: '19',
+    id: '20',
     interprete: 'Usman Ally',
     user: 'usmanally',
     instagramUrl: 'https://www.instagram.com/usmanally/',
@@ -200,8 +207,8 @@ card: {
   elevation: 2,
 },
 image: {
-  width: 80,
-  height: 90,
+  width: 85,
+  height: 95,
   borderRadius: 20, // Tornando a imagem redonda
   marginRight: 10,
 },
