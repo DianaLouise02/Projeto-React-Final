@@ -1,76 +1,75 @@
 import React, { useEffect, useState } from 'react'
-import { Button, FlatList, StyleSheet, Text, TextInput, TouchableOpacity, View } from 'react-native'
+import {FlatList, StyleSheet, Text, TextInput, TouchableOpacity, View } from 'react-native'
 import axios from 'axios';
 
 export default function Forum({route}) {
-  const { nome } = route.params;
+  const { nome, isLogado } = route.params;
   const [comentarios, setComentarios] = useState([]);
   const [texto, setTexto] = useState('');
   const [idEditando, setIdEditando] = useState(null);
 
-  // Função para buscar comentários
-  const buscarComentarios = async () => {
-    const resposta = await axios.get('http://10.0.2.2:3000/comentarios');
-    setComentarios(resposta.data);
-  };
-
-  // Função para adicionar ou editar um comentário
-  const manipularEnvio = async () => {
-    if (idEditando) {
-      await axios.put(`http://10.0.2.2:3000/comentarios/${idEditando}`, { texto });
-      setIdEditando(null);
-    } else {
-      await axios.post('http://10.0.2.2:3000/comentarios', { texto, autor: 'Usuário1' });
-    }
-    setTexto('');
-    buscarComentarios();
-  };
-
-  // Função para editar um comentário
-  const manipularEdicao = (comentario) => {
-    setTexto(comentario.texto);
-    setIdEditando(comentario.id);
-  };
-
-  // Função para deletar um comentário
-  const manipularDelecao = async (id) => {
-    await axios.delete(`http://10.0.2.2:3000/comentarios/${id}`);
-    buscarComentarios();
-  };
-
   useEffect(() => {
-    buscarComentarios();
+    const fetchComentarios = async () => {
+      const resposta = await axios.get('http://10.0.2.2:3000/comentarios');
+      setComentarios(resposta.data);
+    };
+    fetchComentarios();
   }, []);
 
+  const adicionarComentario = async () => {
+    if (isLogado) {
+      await axios.post('http://10.0.2.2:3000/comentarios', { texto, nome });
+      setTexto('');
+      fetchComentarios();
+    }
+  };
+
+  const editarComentario = async (comentario) => {
+    if (isLogado) {
+      setTexto(comentario.texto);
+      setIdEditando(comentario.id);
+    }
+  };
+
+  const deletarComentario = async (id) => {
+    if (isLogado) {
+      await axios.delete(`http://10.0.2.2:3000/comentarios/${id}`);
+      fetchComentarios();
+    }
+  };
   return (
     <View style={estilos.container}>
-      <TextInput
-        style={estilos.input}
-        placeholder="Digite seu comentário"
-        value={texto}
-        onChangeText={setTexto}
-        />
-        <TouchableOpacity 
-        style={estilos.button}
-        onPress={manipularEnvio} 
-      >
-        <Text style={estilos.buttonText}>{idEditando ? "Editar Comentário" : "Adicionar Comentário"}</Text>
-      </TouchableOpacity>
+    {isLogado && (
+        <>
+          <TextInput
+            style={styles.input}
+            placeholder="Digite seu comentário"
+            value={texto}
+            onChangeText={setTexto}
+          />
+          <TouchableOpacity style={styles.button} onPress={adicionarComentario}>
+            <Text style={styles.buttonText}>Adicionar Comentário</Text>
+          </TouchableOpacity>
+        </>
+      )}
       <FlatList
-        data={comentarios}
-        keyExtractor={(item) => item.id.toString()}
-        renderItem={({ item }) => (
-          <View style={estilos.containerComentario}>
-            <Text>{item.texto} - {item.autor}</Text>
-            <View style={estilos.containerBotoes}>
-              <TouchableOpacity onPress={() => manipularEdicao(item)}>
-                <Text style={estilos.botaoEditar}>Editar</Text>
-              </TouchableOpacity>
-              <TouchableOpacity onPress={() => manipularDelecao(item.id)}>
-                <Text style={estilos.botaoDeletar}>Deletar</Text>
-              </TouchableOpacity>
-            </View>
-          </View>
+       data={comentarios}
+       keyExtractor={(item) => item.id.toString()}
+       renderItem={({ item }) => (
+         <View style={styles.containerComentario}>
+           <Text>{item.texto} - {item.autor}</Text>
+           {isLogado && (
+             <View style={styles.containerBotoes}>
+               <TouchableOpacity onPress={() => editarComentario(item)}>
+                 <Text style={styles.botaoEditar}>Editar</Text>
+               </TouchableOpacity>
+               <TouchableOpacity onPress={() => deletarComentario(item.id)}>
+                 <Text style={styles.botaoDeletar}>Deletar</Text>
+               </TouchableOpacity>
+             </View>
+           )}
+         </View>
+        
         )}
       />
     </View>
