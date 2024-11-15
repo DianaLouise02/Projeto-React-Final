@@ -2,7 +2,7 @@ import { useNavigation } from "@react-navigation/native";
 import React from "react";
 import {ScrollView,StyleSheet,Text,TouchableOpacity,View} from "react-native";
 import Card from "../Components/Card";
-import Login from "./Login";
+
 
 export default function Home() {
   const navigation = useNavigation();

@@ -1,114 +1,87 @@
 import React, { useState } from "react";
 import { useNavigation } from "@react-navigation/native";
-import { Alert, StyleSheet, Text, TextInput, TouchableOpacity, View} from "react-native";
+import {StyleSheet, Text, TextInput, TouchableOpacity, View} from "react-native";
 import axios from "axios";
 
 export default function Login() {
   const navigation = useNavigation();
-  const [email, setEmail] = useState("");
-  const [senha, setSenha] = useState("");
+  const [email, setEmail] = useState('');
+  const [senha, setSenha] = useState('');
+  const [mensagem, setMensagem] = useState('');
 
-  const logar = () => {
-    if (!email || !senha) {
-      Alert.alert("Erro!", "Por favor, preencha todos os campos.");
-      return;
+  const loginUsuario = async () => {
+    try {
+      const resposta = await axios.get(`http://10.0.2.2:3000/usuarios?email=${email}&senha=${senha}`);
+      if (resposta.data.length > 0) {
+        setMensagem(`Bem-vindo, ${resposta.data[0].nome}!`);
+        // Navegar para a tela do fórum imediatamente após login
+        navigation.navigate('Forum', { nome: resposta.data[0].nome });
+      } else {
+        setMensagem('Credenciais inválidas');
+      }
+    } catch (erro) {
+      console.error("Erro ao fazer login:", erro);
     }
-
-    // Requisição
-    axios
-      .get("http://10.0.2.2:3000/usuarios")
-      .then((response) => {
-        const usuarios = response.data;
-
-        // Verificação do usuário 
-        const usuarioEncontrado = usuarios.find((usuario) => usuario.email === email && usuario.senha === senha);
-
-        if (usuarioEncontrado) {
-          Alert.alert("Login realizado com sucesso!");
-        
-          navigation.navigate("Home");
-        } else {
-          Alert.alert("Email ou senha incorretos!");
-        }
-      })
-      .catch((error) => {
-        Alert.alert("Erro ao tentar fazer login.", error.message);
-      });
-  };
-
-  // Ir para a página de cadastro
-  const irParaCadastro = () => {
-    navigation.navigate("Cadastro");
   };
 
   return (
-    <View style={estilos.container}>
-    <View style={estilos.form}>
+    <View style={styles.container}>
       <TextInput
-        style={estilos.input}
+        style={styles.input}
         placeholder="Email"
         value={email}
         onChangeText={setEmail}
       />
       <TextInput
-        style={estilos.input}
+        style={styles.input}
         placeholder="Senha"
         secureTextEntry
         value={senha}
         onChangeText={setSenha}
       />
-      <TouchableOpacity style={estilos.botao} onPress={logar}>
-        <Text style={estilos.botaoTexto}>Login</Text>
+    <TouchableOpacity style={styles.button} onPress={loginUsuario}>
+        <Text style={styles.buttonText}>Login</Text>
       </TouchableOpacity>
-
-      {/* Link para a página de cadastro */}
-      <TouchableOpacity onPress={irParaCadastro}>
-        <Text style={estilos.linkTexto}>Cadastre uma conta</Text>
+      {mensagem ? <Text style={styles.mensagem}>{mensagem}</Text> : null}
+      <TouchableOpacity onPress={() => navigation.navigate('Cadastro')}>
+        <Text style={styles.link}>Não tem uma conta? Cadastre-se</Text>
       </TouchableOpacity>
-    </View>
     </View>
   );
-}
+};
 
-const estilos = StyleSheet.create({
+const styles = StyleSheet.create({
   container: {
     flex: 1,
-    padding: 16,
-    justifyContent: 'flex-start', // Espaço no topo menor
-  },
-  form: {
-    flex: 1, // O formulário ocupa o maior espaço disponível
-    justifyContent: 'center', // Centraliza o conteúdo dentro do formulário
-    marginTop: 8, // Distância do topo da tela
+    justifyContent: 'center',
+    padding: 50,
     alignItems:"center"
   },
   input: {
     height: 40,
-    width: "80%",
+    width:"95%",
     borderColor: 'gray',
     borderWidth: 1,
     marginBottom: 12,
     paddingHorizontal: 8,
-    
   },
-  botao: {
-    backgroundColor: 'gray',
-    padding: 10,
-    alignItems: 'center',
-    marginBottom: 12,
-    borderRadius: 5,
-    width: "30%",
+  mensagem: {
+    marginTop: 12,
+    color: 'red',
+    textAlign: 'center',
   },
-  botaoTexto: {
-    color: 'white',
-    fontWeight: 'bold',
-    fontSize: 18,
-  },
-  linkTexto: {
-    marginTop: 16,
-    color: 'darkgray',
+  link: {
+    marginTop: 40,
+    color: 'gray',
     textAlign: 'center',
     textDecorationLine: 'underline',
   },
-
+  buttonText: {
+    textAlign:"center",
+    backgroundColor:"gray",
+    width: 80,
+    padding: 10,
+    color:"white"
+  }
 });
+

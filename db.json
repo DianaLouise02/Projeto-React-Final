@@ -144,7 +144,7 @@
       "id": "13",
       "nome": "Jenny Griffith",
       "imageCharacter": "https://static.wikia.nocookie.net/suits/images/a/a0/S01E10Promo08_-_Jenny.jpg/revision/latest?cb=20170218090732",
-      "descricao": " Ex-namorada de Trevor Evans e Mike Ross. Seu relacionamento com Mike era complicado, pois, além do fato de que ele era o melhor amigo de seu ex-namorado, Mike estava lutando para escolher entre ela e Rachel Zane ",
+      "descricao": " Ex-namorada de Trevor Evans e Mike Ross. Seu relacionamento com Mike era complicado, pois, além do fato de que ele era o melhor amigo de seu ex-namorado, Mike estava lutando para escolher entre ela e Rachel Zane. ",
       "aparicao": "2011-2012"
     },
     {
@@ -349,29 +349,8 @@
     }
   ],
   "usuarios": [
-    {
-      "id": 1,
-      "nome": "Thais",
-      "email": "thais@gmail.com",
-      "senha": "9876543"
-    },
-    {
-      "id": 2,
-      "nome": "Carlos André",
-      "email": "carlosandre@gmail.com",
-      "senha": "40028922"
-    },
-    {
-      "id": 3,
-      "nome": "Diana Louise",
-      "email": "diana125@email.com",
-      "senha": ""
-    },
-    {
-      "id": 4,
-      "nome": "Maria Helena",
-      "email": "mariahelena@email.com",
-      "senha": "35789415"
-    }
-  ]
+    
+     
+  ],
+  "comentarios": []
 }

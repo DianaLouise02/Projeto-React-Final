@@ -1,143 +1,115 @@
-import React, { useState } from "react";
-import { Alert, StyleSheet, Text, TextInput, TouchableOpacity, View } from "react-native";
+import React, { useEffect, useState } from "react";
+import { StyleSheet, Text, TextInput, TouchableOpacity, View } from "react-native";
 import { useNavigation } from "@react-navigation/native";
 import axios from 'axios';
+
 
 
 export default function Cadastro() {
   const navigation = useNavigation();
 
-  const [nome, setNome] = useState("");
-  const [email, setEmail] = useState("");
-  const [senha, setSenha] = useState("");
+  const [nome, setNome] = useState('');
+  const [email, setEmail] = useState('');
+  const [senha, setSenha] = useState('');
+  const [mensagem, setMensagem] = useState('');
+  const [nextId, setNextId] = useState(1)
 
-  const enviarCadastro = async () => {
-    if (!nome || !email || !senha) {
-      Alert.alert("Erro! Por favor, preencha todos os campos.");
-      return;
+
+  useEffect(() => {
+    
+  const fetchNextId = async () => {
+    try {
+      const resposta = await axios.get('http://10.0.2.2:3000/usuarios');
+      if (resposta.data.length === 0) {
+        setNextId(1); // Reinicia o próximo ID para 1
+      } else {
+      const maxId = Math.max(...resposta.data.map((item) => item.id));
+      setNextId(maxId + 1);
     }
-    axios
-    .get("http://10.0.2.2:3000/usuarios")
-    .then((response) => {
-      const usuarios = response.data;
-      const ultimoId = usuarios.length > 0 ? Math.max(...usuarios.map((u) => u.id)) : 0;
-      const novoId = ultimoId + 1;
-
-    const novoCadastro = {id: novoId, nome, email, senha };
-    axios
-      .post("http://10.0.2.2:3000/usuarios", novoCadastro)
-      .then((response) => {
-        if (response.status === 201) {
-          Alert.alert("Cadastro realizado com sucesso!");
-          setEmail("");
-          setSenha("");
-        } else {
-          Alert.alert("Erro! Não é possível realizar cadastro.");
-        }
-      })
-      .catch((error) => {
-        // Requisição POST
-        Alert.alert("Erro ao tentar cadastrar", error.message);
-      });
-      
-    })
-    .catch((error) => {
-      // Requisição GET
-      Alert.alert("Erro ao buscar usuários", error.message);
-    });
-};
-  // Ir para a página de login
-  const irParaLogin = () => {
-    navigation.navigate("Login");
+   } catch (erro) {
+      console.error('Erro ao buscar o próximo ID:', erro);
+    }
   };
+  fetchNextId();
+}, []); 
 
+
+  const cadastrarUsuario = async () => {
+    try {
+      await axios.post('http://10.0.2.2:3000/usuarios', {id: nextId, nome, email, senha });
+      setMensagem('Cadastro realizado com sucesso!');
+      setNextId(nextId + 1); // Incrementa o próximo ID
+     
+    } catch (erro) {
+      console.error("Erro ao cadastrar:", erro);
+      setMensagem('Erro ao cadastrar. Tente novamente.');
+    }
+  };
+ 
 
   return (
-    <View style={estilos.container}>
-    <View style={estilos.form}>
-      <Text style={estilos.label}>Nome</Text>
+    <View style={styles.container}>
       <TextInput
-        style={estilos.input}
-        placeholder="Digite seu nome"
+        style={styles.input}
+        placeholder="Nome"
         value={nome}
         onChangeText={setNome}
       />
-      <Text style={estilos.label}>Email</Text>
       <TextInput
-        style={estilos.input}
-        placeholder="Digite o email"
+        style={styles.input}
+        placeholder="Email"
         value={email}
         onChangeText={setEmail}
       />
-
-      <Text style={estilos.label}>Senha</Text>
       <TextInput
-        style={estilos.input}
-        placeholder="Digite a senha"
+        style={styles.input}
+        placeholder="Senha"
+        secureTextEntry
         value={senha}
         onChangeText={setSenha}
-        secureTextEntry
       />
-      <TouchableOpacity style={estilos.botao} onPress={enviarCadastro}>
-        <Text style={estilos.botaoTexto}>Cadastrar</Text>
+        <TouchableOpacity style={styles.button} onPress={cadastrarUsuario}>
+        <Text style={styles.buttonText}>Cadastrar</Text>
+        </TouchableOpacity>
+      {mensagem ? <Text style={styles.mensagem}>{mensagem}</Text> : null}
+      <TouchableOpacity onPress={() => navigation.navigate('Login')}>
+        <Text style={styles.link}>Já tem uma conta? Faça login</Text>
       </TouchableOpacity>
-
-      <TouchableOpacity onPress={irParaLogin}>
-        <Text style={estilos.linkTexto}>Faça Login</Text>
-      </TouchableOpacity>
-    </View>
     </View>
   );
-}
+};
 
-const estilos = StyleSheet.create({
-
+const styles = StyleSheet.create({
   container: {
     flex: 1,
-    padding: 16,
-    justifyContent: 'flex-start' 
-  }, 
-
-  label: {
-    fontSize: 14,
-    marginBottom: 2,
-    fontWeight: 'bold',
-    textAlign: 'left', 
-    width: '80%'
-  },
-
-  form: {
-    flex: 1, 
-    justifyContent: 'center', 
-    marginTop: 8, 
-    alignItems:'center'
+    justifyContent: 'center',
+    padding: 50,
+   alignItems:"center"
   },
   input: {
     height: 40,
-    width: "80%",
+    width:"95%",
     borderColor: 'gray',
     borderWidth: 1,
     marginBottom: 12,
-    paddingHorizontal: 8   
+    paddingHorizontal: 8,
   },
-  botao: {
-    backgroundColor: 'gray',
-    padding: 10,
-    alignItems: 'center',
-    marginBottom: 12,
-    borderRadius: 5,
-    width: "30%",
+  mensagem: {
+    marginTop: 12,
+    color: 'red',
+    textAlign: 'center',
   },
-  botaoTexto: {
-    color: 'white',
-    fontWeight: 'bold',
-    fontSize: 18,
-  },
-  linkTexto: {
-    marginTop: 16,
-    color: 'darkgray',
+  link: {
+    marginTop: 12,
+    color: 'gray',
     textAlign: 'center',
     textDecorationLine: 'underline',
   },
-
+  buttonText: {
+    textAlign:"center",
+    backgroundColor:"gray",
+    width: 100,
+    padding: 10,
+    color:"white"
+  }
 });
