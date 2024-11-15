@@ -1,23 +1,15 @@
 import React from 'react'
-import { Image, StyleSheet, Text, View } from 'react-native'
+import { Image, StyleSheet, Text, TouchableOpacity, View } from 'react-native'
+import { useNavigation } from '@react-navigation/native';
 
-import { TouchableOpacity } from 'react-native';
-import Icon from 'react-native-vector-icons/MaterialIcons';
 
 export default function Header() {
- 
-
-  // Função para navegar para a tela de login
 
 
   return (
     <View style={estilos.topo}>
       <Image style={estilos.imageHeader} source={require('../Images/SuitsLogo.png')}
-      />
-      
-
-
-      
+      />  
     </View>
   )
 }
@@ -39,14 +31,7 @@ const estilos = StyleSheet.create({
     width: "30%",
     height: 75,
     marginTop: 25,
-    marginLeft: 131,
+    marginLeft: 130,
   },
-  loginText: {
-    color: 'white',
-    fontSize: 12,
-    marginRight: 10, // Ajuste para um bom espaçamento
-    marginTop: 25, // Alinha o texto com a imagem
-  },
-
-
+  
 })
