@@ -1,26 +1,35 @@
-import React, { useState } from "react";
-import { useNavigation } from "@react-navigation/native";
-import {StyleSheet, Text, TextInput, TouchableOpacity, View} from "react-native";
-import axios from "axios";
+import React, { useState } from 'react';
+import { View, TextInput, Button, Text, StyleSheet, TouchableOpacity, Alert } from 'react-native';
+import axios from 'axios';
 
-export default function Login() {
-  const navigation = useNavigation();
+export default function Login({ navigation }) {
   const [email, setEmail] = useState('');
   const [senha, setSenha] = useState('');
-  const [mensagem, setMensagem] = useState('');
+  const [erro, setErro] = useState('');
 
-  const loginUsuario = async () => {
+  const fazerLogin = async () => {
     try {
-      const resposta = await axios.get(`http://10.0.2.2:3000/usuarios?email=${email}&senha=${senha}`);
-      if (resposta.data.length > 0) {
-        setMensagem(`Bem-vindo, ${resposta.data[0].nome}!`);
-        // Navegar para a tela do fórum imediatamente após login
-        navigation.navigate('Forum', { nome: resposta.data[0].nome });
-      } else {
-        setMensagem('Credenciais inválidas');
+      const resposta = await axios.get('http://10.0.2.2:3000/usuarios');
+      const usuarios = resposta.data;
+
+      // Verificar se usuarios é um array antes de usar o .find()
+      if (!Array.isArray(usuarios)) {
+        throw new Error('Dados de usuários estão mal formatados');
       }
-    } catch (erro) {
-      console.error("Erro ao fazer login:", erro);
+
+      const usuarioEncontrado = usuarios.find(
+        (usuario) => usuario.email === email && usuario.senha === senha
+      );
+
+      if (usuarioEncontrado) {
+        alert('Login realizado com sucesso!');
+        navigation.navigate('Forum', { usuarioId: usuarioEncontrado.id }); // Passa o ID do usuário para a tela de Fórum
+      } else {
+        setErro('Email ou senha incorretos. Tente novamente.');
+      }
+    } catch (error) {
+      console.error('Erro ao fazer login:', error);
+      setErro('Erro ao fazer login. Tente novamente.');
     }
   };
 
@@ -31,57 +40,62 @@ export default function Login() {
         placeholder="Email"
         value={email}
         onChangeText={setEmail}
+        keyboardType="email-address"
       />
       <TextInput
         style={styles.input}
         placeholder="Senha"
-        secureTextEntry
         value={senha}
         onChangeText={setSenha}
+        secureTextEntry
       />
-    <TouchableOpacity style={styles.button} onPress={loginUsuario}>
-        <Text style={styles.buttonText}>Login</Text>
+      {erro ? <Text style={styles.error}>{erro}</Text> : null}
+      <TouchableOpacity style={styles.button} onPress={fazerLogin}>
+        <Text style={styles.buttonText}>Entrar</Text>
       </TouchableOpacity>
-      {mensagem ? <Text style={styles.mensagem}>{mensagem}</Text> : null}
-      <TouchableOpacity onPress={() => navigation.navigate('Cadastro')}>
-        <Text style={styles.link}>Não tem uma conta? Cadastre-se</Text>
-      </TouchableOpacity>
+      <Text
+        style={styles.link}
+        onPress={() => navigation.navigate('Cadastro')}
+      >
+        Não tem uma conta? Cadastre-se
+      </Text>
     </View>
   );
-};
+}
 
 const styles = StyleSheet.create({
   container: {
     flex: 1,
+    padding: 20,
     justifyContent: 'center',
-    padding: 50,
-    alignItems:"center"
   },
   input: {
     height: 40,
-    width:"95%",
     borderColor: 'gray',
     borderWidth: 1,
-    marginBottom: 12,
-    paddingHorizontal: 8,
+    marginBottom: 10,
+    paddingHorizontal: 10,
   },
-  mensagem: {
-    marginTop: 12,
-    color: 'red',
+  button: {
+    backgroundColor: 'black',
+    padding: 12,
+    borderRadius: 5,
+    alignSelf: 'center',
+    width: '60%',
+  },
+  buttonText: {
+    color: 'white',
     textAlign: 'center',
   },
   link: {
-    marginTop: 40,
     color: 'gray',
-    textAlign: 'center',
     textDecorationLine: 'underline',
+    textAlign: 'center',
+    marginTop: 10,
   },
-  buttonText: {
-    textAlign:"center",
-    backgroundColor:"gray",
-    width: 80,
-    padding: 10,
-    color:"white"
-  }
+  error: {
+    color: 'red',
+    textAlign: 'center',
+    marginBottom: 10,
+  },
 });
-

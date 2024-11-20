@@ -350,11 +350,59 @@
   ],
   "usuarios": [
     {
-      "id": 1,
-      "nome": "Zilda Gomes",
-      "email": "zildagomes@gmail.com",
-      "senha": "87412563"
+      "id": "1",
+      "nome": "Diana Louise",
+      "email": "dlo@gmail.com",
+      "senha": "40028922"
+    },
+    {
+      "id": "2",
+      "nome": "Celeste",
+      "email": "celeste@gmail.com",
+      "senha": "55911466"
     }
   ],
-  "comentarios": []
+  "comentarios": [
+    {
+      "id": "1",
+      "autor": "João",
+      "texto": "Adoro como o Harvey sempre consegue vencer com confiança! A série é inspiradora."
+    },
+    {
+      "id": "2",
+      "autor": "Maria",
+      "texto": "A química entre o Mike e o Harvey é o que mais me cativa. Eles formam uma ótima dupla!"
+    },
+    {
+      "id": "3",
+      "autor": "Carlos",
+      "texto": "Donna é minha personagem favorita. Ela é inteligente, divertida e sempre sabe o que fazer."
+    },
+    {
+      "id": "4",
+      "autor": "Ana",
+      "texto": "A série tem tantos momentos tensos no tribunal. Eu sempre fico na ponta da cadeira!"
+    },
+    {
+      "id": "5",
+      "autor": "Pedro",
+      "texto": "Louis Litt tem um crescimento de personagem incrível. Ele passa de antagonista a alguém que eu realmente gosto."
+    },
+    {
+      "id": "6",
+      "autor": "Carla",
+      "texto": "Amo demais a primeira temporada"
+    },
+    {
+      "id": "7",
+      "autor": "Celeste",
+      "texto": "Oiii"
+    },
+    {
+      "id": "8",
+      "autor": "Celeste",
+      "autorId": "2",
+      "texto": "Hello"
+    }
+  ]
 }

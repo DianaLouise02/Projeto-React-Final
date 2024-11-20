@@ -1,51 +1,37 @@
-import React, { useEffect, useState } from "react";
-import { StyleSheet, Text, TextInput, TouchableOpacity, View } from "react-native";
-import { useNavigation } from "@react-navigation/native";
+
+import React, { useState } from 'react';
+import { View, TextInput, Text, StyleSheet, TouchableOpacity } from 'react-native';
 import axios from 'axios';
 
-
-
-export default function Cadastro() {
-  const navigation = useNavigation();
-
+export default function Cadastro({ navigation }) {
   const [nome, setNome] = useState('');
   const [email, setEmail] = useState('');
   const [senha, setSenha] = useState('');
-  const [mensagem, setMensagem] = useState('');
-  const [nextId, setNextId] = useState(1)
 
-
-  useEffect(() => {
-    
-  const fetchNextId = async () => {
+  const handleCadastro = async () => {
     try {
+      // Obter os usuários existentes para definir o próximo ID
       const resposta = await axios.get('http://10.0.2.2:3000/usuarios');
-      if (resposta.data.length === 0) {
-        setNextId(1); // Reinicia o próximo ID para 1
-      } else {
-      const maxId = Math.max(...resposta.data.map((item) => item.id));
-      setNextId(maxId + 1);
-    }
-   } catch (erro) {
-      console.error('Erro ao buscar o próximo ID:', erro);
+      const usuarios = resposta.data;
+
+      // Começando com o ID 1 na ausência de usuários
+      const proximoId = usuarios.length > 0 ? Math.max(...usuarios.map(u => u.id)) + 1 : 1;
+
+      // Criação de um novo usuário com o ID gerado
+      const novoUsuario = { id: proximoId, nome, email, senha };
+
+      // Enviando o novo usuário para a API
+      const respostaCadastro = await axios.post('http://10.0.2.2:3000/usuarios', novoUsuario);
+
+      if (respostaCadastro.status === 201) {
+        alert('Cadastro realizado com sucesso!');
+        navigation.navigate('Login');
+      }
+    } catch (error) {
+      console.error('Erro ao cadastrar usuário:', error);
+      alert('Erro ao cadastrar. Tente novamente.');
     }
   };
-  fetchNextId();
-}, []); 
-
-
-  const cadastrarUsuario = async () => {
-    try {
-      await axios.post('http://10.0.2.2:3000/usuarios', {id: nextId, nome, email, senha });
-      setMensagem('Cadastro realizado com sucesso!');
-      setNextId(nextId + 1); // Incrementa o próximo ID
-     
-    } catch (erro) {
-      console.error("Erro ao cadastrar:", erro);
-      setMensagem('Erro ao cadastrar. Tente novamente.');
-    }
-  };
- 
 
   return (
     <View style={styles.container}>
@@ -60,56 +46,56 @@ export default function Cadastro() {
         placeholder="Email"
         value={email}
         onChangeText={setEmail}
+        keyboardType="email-address"
       />
       <TextInput
         style={styles.input}
         placeholder="Senha"
-        secureTextEntry
         value={senha}
         onChangeText={setSenha}
+        secureTextEntry
       />
-        <TouchableOpacity style={styles.button} onPress={cadastrarUsuario}>
+      <TouchableOpacity style={styles.button} onPress={handleCadastro}>
         <Text style={styles.buttonText}>Cadastrar</Text>
-        </TouchableOpacity>
-      {mensagem ? <Text style={styles.mensagem}>{mensagem}</Text> : null}
-      <TouchableOpacity onPress={() => navigation.navigate('Login')}>
-        <Text style={styles.link}>Já tem uma conta? Faça login</Text>
       </TouchableOpacity>
+      <Text
+        style={styles.link}
+        onPress={() => navigation.navigate('Login')}
+      >
+        Já tem uma conta? Faça login
+      </Text>
     </View>
   );
-};
+}
 
 const styles = StyleSheet.create({
   container: {
     flex: 1,
+    padding: 20,
     justifyContent: 'center',
-    padding: 50,
-   alignItems:"center"
   },
   input: {
     height: 40,
-    width:"95%",
     borderColor: 'gray',
     borderWidth: 1,
-    marginBottom: 12,
-    paddingHorizontal: 8,
+    marginBottom: 10,
+    paddingHorizontal: 10,
   },
-  mensagem: {
-    marginTop: 12,
-    color: 'red',
+  button: {
+    backgroundColor: 'black',
+    padding: 12,
+    borderRadius: 5,
+    alignSelf: 'center',
+    width: '60%',
+  },
+  buttonText: {
+    color: 'white',
     textAlign: 'center',
   },
   link: {
-    marginTop: 12,
     color: 'gray',
-    textAlign: 'center',
     textDecorationLine: 'underline',
+    textAlign: 'center',
+    marginTop: 10,
   },
-  buttonText: {
-    textAlign:"center",
-    backgroundColor:"gray",
-    width: 100,
-    padding: 10,
-    color:"white"
-  }
 });

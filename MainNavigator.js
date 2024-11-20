@@ -24,8 +24,7 @@ export default function MainNavigator() {
         <Stack.Screen name="Personagens" component={Personagens} />
         <Stack.Screen name="Curiosidades" component={Curiosidades} />
         <Stack.Screen name="RedesSociais" component={RedesSociais}  options={{ title: 'Redes Sociais'}} />
-        <Stack.Screen name="Forum" component={Forum} />
-      
+        <Stack.Screen name="Forum" component={Forum} options={{ title: 'Fórum'}}/> 
       </Stack.Navigator>
     </NavigationContainer>
   )
