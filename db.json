@@ -272,7 +272,22 @@
       "imageCharacter": "https://static.wikia.nocookie.net/suits/images/5/5b/Andrew_Malik_%287x09%29.png/revision/latest?cb=20170908112440",
       "descricao": "  Ex-procurador-geral adjunto do estado de Nova York e ex-promotor que trabalhava para Cameron Dennis, no posto hierárquico abaixo de Harvey.",
       "aparicao": "2017-2019 "
+    },
+    {
+      "id": "32",
+      "nome": "Travis Tanner",
+      "imageCharacter": "https://static.wikia.nocookie.net/suits/images/e/eb/Travis_Tanner_%285x5%29.png/revision/latest?cb=20190831052656",
+      "descricao": " Era originalmente um sócio sênior da Clyde-MacPhee em Boston. Tanner primeiro desafia Harvey Specter em um caso sobre uma empresa de petróleo e perde. Dizem que ele é um jogador de tênis excepcional, uma semelhança com Louis Litt. ",
+      "aparicao": "2011, 2012, 2013 e 2015 "
+    },
+    {
+      "id": "33",
+      "nome": "Dominic Barone",
+      "imageCharacter": "https://static.wikia.nocookie.net/suits/images/2/26/Dominic_Barone_-_USA_Network_Promo.jpg/revision/latest?cb=20151028135802",
+      "descricao": " É o designer-chefe de motores da McKernon Motors , tendo construído muitos motores personalizados considerados os melhores do mundo, sendo muito usados ​​em corridas de Fórmula 1.",
+      "aparicao": "2011"
     }
+    
   ],
   "curiosidades": [
     {
@@ -360,6 +375,12 @@
       "nome": "Celeste",
       "email": "celeste@gmail.com",
       "senha": "55911466"
+    },
+    {
+      "id": "3",
+      "nome": "Thiago Rodrigues",
+      "email": "thiagodograu@email.com",
+      "senha": "123456"
     }
   ],
   "comentarios": [
@@ -399,10 +420,10 @@
       "texto": "Oiii"
     },
     {
-      "id": "8",
-      "autor": "Celeste",
-      "autorId": "2",
-      "texto": "Hello"
+      "id": "4c76",
+      "autor": "Diana Louise",
+      "autorId": "1",
+      "texto": "A ultima temporada foi corrida"
     }
   ]
 }
