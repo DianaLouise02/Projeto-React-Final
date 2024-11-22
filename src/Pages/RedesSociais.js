@@ -151,6 +151,55 @@ const redesSociais = [
     instagramUrl: 'https://www.instagram.com/usmanally/',
     imagemUrl: 'https://static.wikia.nocookie.net/suits/images/5/5b/Andrew_Malik_%287x09%29.png/revision/latest/scale-to-width/360?cb=20170908112440',
   },
+  {
+    id: '21',
+    interprete: 'Eric Close',
+    user: 'ericrclose',
+    instagramUrl: 'https://www.instagram.com/ericrclose/',
+    imagemUrl: 'https://upload.wikimedia.org/wikipedia/commons/9/97/Eric_Close.JPG',
+  },
+  {
+    id: '22',
+    interprete: 'Titus Welliver',
+    user: 'tituswelliverofficial',
+    instagramUrl: 'https://www.instagram.com/tituswelliverofficial/',
+    imagemUrl: 'https://m.media-amazon.com/images/M/MV5BMTY0OTA0Mzg3N15BMl5BanBnXkFtZTcwNDExMzc0Mw@@._V1_FMjpg_UX1000_.jpg',
+  },
+  {
+    id: '23',
+    interprete: 'Ian Reed Kesler',
+    user: 'ianreedkesler',
+    instagramUrl: 'https://www.instagram.com/ianreedkesler/',
+    imagemUrl: 'https://images.fandango.com/ImageRenderer/300/0/redesign/static/img/default_poster.png/0/images/masterrepository/performer%20images/343792/IanReedKesler-2018.jpg',
+  },
+  {
+    id: '24',
+    interprete: 'Amy Acker',
+    user: 'theamyacker',
+    instagramUrl: 'https://www.instagram.com/theamyacker/',
+    imagemUrl: 'https://image.tmdb.org/t/p/w500/8qB2XswCqNOSmeK863nYF3hBdiT.jpg',
+  },
+  {
+    id: '25',
+    interprete: 'Max Topplin',
+    user: 'maxtopplin',
+    instagramUrl: 'https://www.instagram.com/maxtopplin/',
+    imagemUrl: 'https://m.media-amazon.com/images/M/MV5BNTE4MjkwNTk3OV5BMl5BanBnXkFtZTcwOTU4NDUxNw@@._V1_.jpg',
+  },
+  {
+    id: '26',
+    interprete: 'Ray Proscia',
+    user: 'rayproscia',
+    instagramUrl: 'https://www.instagram.com/rayproscia/',
+    imagemUrl: 'https://m.media-amazon.com/images/M/MV5BNmExMGJiZWMtOGI5OC00OWNmLWIxMjMtYTk3M2FlYjY5YjYxXkEyXkFqcGc@._V1_.jpg',
+  },
+  {
+    id: '27',
+    interprete: 'Erik Palladino',
+    user: 'erikpalladino',
+    instagramUrl: 'https://www.instagram.com/erikpalladino/',
+    imagemUrl: 'https://m.media-amazon.com/images/M/MV5BOGVhMTk2ZTgtNzc5Yi00NzRlLWIzYzItYWYzMzg4MWE0YThlXkEyXkFqcGc@._V1_.jpg',
+  },
 ]
 
 return (

@@ -243,7 +243,7 @@
       "nome": "Benjamin",
       "imageCharacter": "https://static.wikia.nocookie.net/suits/images/b/b9/Benjamin_%286x15%29.png/revision/latest?cb=20190914133956",
       "descricao": "Especialista em TI e vice-presidente do departamento de TI da Specter Litt Wheeler Williams. Como responsável por toda a rede de computadores e servidores do escritório de advocacia, gerencia e repara todos os computadores, bem como protege a rede de ataques externos.",
-      "aparicao": "2011, 2013, 2015, 2016 e 2019"
+      "aparicao": "2011-2013, 2015-2016 e 2019"
     },
     {
       "id": "28",
@@ -278,15 +278,73 @@
       "nome": "Travis Tanner",
       "imageCharacter": "https://static.wikia.nocookie.net/suits/images/e/eb/Travis_Tanner_%285x5%29.png/revision/latest?cb=20190831052656",
       "descricao": " Era originalmente um sócio sênior da Clyde-MacPhee em Boston. Tanner primeiro desafia Harvey Specter em um caso sobre uma empresa de petróleo e perde. Dizem que ele é um jogador de tênis excepcional, uma semelhança com Louis Litt. ",
-      "aparicao": "2011, 2012, 2013 e 2015 "
+      "aparicao": "2011-2013 e 2015 "
     },
     {
       "id": "33",
       "nome": "Dominic Barone",
       "imageCharacter": "https://static.wikia.nocookie.net/suits/images/2/26/Dominic_Barone_-_USA_Network_Promo.jpg/revision/latest?cb=20151028135802",
       "descricao": " É o designer-chefe de motores da McKernon Motors , tendo construído muitos motores personalizados considerados os melhores do mundo, sendo muito usados ​​em corridas de Fórmula 1.",
-      "aparicao": "2011"
+      "aparicao": "2011 e 2015"
+    },
+    {
+      "id": "34",
+      "nome": "Faye Richardson",
+      "imageCharacter": "https://static.wikia.nocookie.net/suits/images/b/be/Faye_Richardson_%289x2%29.png/revision/latest?cb=20191014164821",
+      "descricao": " É advogada e foi sócia-gerente interina da Specter Litt Wheeler Williams . Ela foi nomeada sócia interina da Zane Specter Litt Wheeler Williams pela Ordem dos Advogados após a destituição de Robert Zane, sendo a terceira infração por má gestão da empresa, após a fraude de Mike Ross e a destituição de Jessica Pearson.",
+      "aparicao": "2019"
+    },
+    {
+      "id": "35",
+      "nome": "Stuart Buzzini",
+      "imageCharacter": "https://static.wikia.nocookie.net/suits/images/6/6a/Stu_Buzzini_%286x10_-_Promotional%29.jpg/revision/latest?cb=20170223051956",
+      "descricao": " Corretor do mercado de ações no Grupo de Investimentos Stevens que já alugou espaço no edifício Pearson Specter Litt . Advogado formado em Yale, ele trocou de carreira porque considerou a negociação de ações uma profissão financeiramente mais viável.",
+      "aparicao": "2016-2018"
+    },
+    {
+      "id": "36",
+      "nome": "Nigel Nesbitt ",
+      "imageCharacter": "https://static.wikia.nocookie.net/suits/images/e/ee/Nigel_%283x07%29.png/revision/latest?cb=20170820092412",
+      "descricao": " Advogado e sócio sênior da Darby International, compartilhando muitos dos campos de especialização e características de Louis Litt, incluindo seu amor por gatos e lama.",
+      "aparicao": "2012"
+    },
+    {
+      "id": "37",
+      "nome": "Esther Litt ",
+      "imageCharacter": "https://static.wikia.nocookie.net/suits/images/6/67/Esther_Litt_%285x4%29.png/revision/latest?cb=20190831050419",
+      "descricao": " Empresária bem-sucedida e irmã de Louis Litt. Aparece pela primeira vez na temporada 5 precisando de ajuda com seus acordos de divórcio.",
+      "aparicao": "2015, 2018 e 2019"
+    },
+    {
+      "id": "38",
+      "nome": " William Sutter",
+      "imageCharacter": "https://static.wikia.nocookie.net/suits/images/0/06/William_Sutter_%286x10%29.png/revision/latest?cb=20190913203416",
+      "descricao": " Era o chefe de uma empresa de investimentos avaliada em US$ 2 bilhões e ex-cliente da Pearson Specter Litt .",
+      "aparicao": "2016"
+    },
+    {
+      "id": "39",
+      "nome": " Harold Gunderson",
+      "imageCharacter": "https://static.wikia.nocookie.net/suits/images/5/5a/Harold_Gunderson_%283x07%29.png/revision/latest?cb=20170820092658",
+      "descricao": " Ex-associado da Pearson Hardman e amigo do Mike Ross. Constantemente é alvo de críticas de Louis Litt, seu antigo gestor.",
+      "aparicao": "2011-2013, 2015 e 2019"
+    },
+    {
+      "id": "40",
+      "nome": "Stan Lipschitz",
+      "imageCharacter": "https://static.wikia.nocookie.net/suits/images/2/2a/Dr._Lipschitz_%287x09%29.png/revision/latest?cb=20170908111800",
+      "descricao": "Terapeuta de Louis Litt. É um cidadão alemão de ascendência judaica. Seus pais deixaram a Alemanha durante a Segunda Guerra Mundial, mas retornaram depois e o criaram, junto com sua irmã.",
+      "aparicao": "2017-2019"
+    },
+    {
+      "id": "41",
+      "nome": "Kevin Miller",
+      "imageCharacter": "https://static.wikia.nocookie.net/suits/images/7/77/Kevin_Miller_%286x6%29.png/revision/latest?cb=20190912202042",
+      "descricao": "Empresário, ex-detento encarcerado na Instituição Correcional Federal de Danbury e companheiro de cela de Mike Ross.",
+      "aparicao": "2016, 2018-2019"
     }
+    
+
     
   ],
   "curiosidades": [
