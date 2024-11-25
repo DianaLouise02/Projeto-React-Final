@@ -15,7 +15,7 @@ export default function Cadastro({ navigation }) {
       const usuarios = resposta.data;
 
       // Começando com o ID 1 na ausência de usuários
-      const proximoId = usuarios.length > 0 ? Math.max(...usuarios.map(u => u.id)) + 1 : 1;
+      const proximoId = usuarios.length > 0 ? String(Math.max(...usuarios.map(u =>parseInt(u.id, 10))) + 1) : "1";
 
       // Criação de um novo usuário com o ID gerado
       const novoUsuario = { id: proximoId, nome, email, senha };

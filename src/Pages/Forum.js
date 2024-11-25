@@ -101,7 +101,7 @@ export default function Forum({ route, navigation }) {
 
       {/* Exibe os comentários */}
       {comentarios.map((comentario) => (
-        <View key={comentario.id} style={styles.commentContainer}>
+        <View key={comentario.id?.toString()} style={styles.commentContainer}>
           <Text style={styles.author}>{comentario.autor}</Text>
           {comentarioEditando === comentario.id ? (
             <View>
@@ -130,7 +130,7 @@ export default function Forum({ route, navigation }) {
             <View>
               <Text>{comentario.texto}</Text>
               {/* Somente o autor do comentário pode editar ou excluir */}
-              {usuarioId === comentario.autorId && (
+              {usuarioId === comentario.autorId?.toString() && (
                 <View style={styles.buttons}>
                   <TouchableOpacity
                     onPress={() => {
