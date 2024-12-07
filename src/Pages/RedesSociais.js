@@ -204,31 +204,29 @@ const redesSociais = [
 
 return (
   <ScrollView>
-  <View style={styles.container}>
-   
-    {redesSociais.map((social) => (
-      <View key={social.id} style={styles.card}>
-        {/* Imagem do ator */}
-        <Image 
-          source={{ uri: social.imagemUrl }} 
-          style={styles.image}
-        />
-        
-        {/* Nome do ator e usuário com ícone do Instagram */}
-        <View style={styles.userContainer}>
-          <TouchableOpacity 
-            style={styles.user} 
+      <View style={styles.container}>
+        {redesSociais.map((social) => (
+          <TouchableOpacity
+            key={social.id}
+            style={styles.card}
             onPress={() => abrirInstagram(social.instagramUrl)}
           >
-            {/* Ícone do Instagram */}
-            <Icon name="instagram" size={16} color="#E1306C" style={styles.icon} />
-            <Text style={styles.username}>@{social.user}</Text>
+            <Image source={{ uri: social.imagemUrl }} style={styles.image} />
+
+            
+            <View style={styles.textContainer}>
+              <Icon
+                name="instagram"
+                size={20}
+                color="#E1306C"
+                style={styles.icon}
+              />
+              <Text style={styles.username}>@{social.user}</Text>
+              </View>
           </TouchableOpacity>
-        </View>
+        ))}
       </View>
-    ))}
-  </View>
-  </ScrollView>
+    </ScrollView>
 );
 };
 
@@ -261,20 +259,17 @@ image: {
   borderRadius: 20, // Tornando a imagem redonda
   marginRight: 10,
 },
-userContainer: {
-  flexDirection: 'row',
-  alignItems: 'center',
-},
-user: {
-  flexDirection: 'row',
-  alignItems: 'center',
+textContainer: {
+  flexDirection: "row",
+  alignItems: "center",
 },
 icon: {
-  marginRight: 5,
+  marginRight: 8,
 },
 username: {
-  fontSize: 14,
-  color: '#000',
+  fontSize: 16,
+  fontWeight: "bold",
+  color: "#333",
 },
 });
 
